@@ -38,7 +38,8 @@ app.put('/image', (req, res) => { image.handleImageDetect(req, res, db)})
 
 app.post('/imageurl', (req, res) => { image.handleApiCall(req, res) })
 
-app.listen(3000, () => {
-    console.log('server started')
+const port = process.env.PORT
+app.listen(port, () => {
+    console.log(`server started on ${port}`)
 })
 
